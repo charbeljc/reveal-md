@@ -17,6 +17,15 @@
 		  ':35729/livereload.js?snipver=1"></' + 'script>')
 		</script>
         {{/watch}}
+        <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '{{{base}}}/css/print/pdf.css' : '{{{base}}}css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
     </head>
     <body>
 
